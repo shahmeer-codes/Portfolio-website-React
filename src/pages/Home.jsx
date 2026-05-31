@@ -19,28 +19,30 @@ const Home = () => {
             <TypeAnimation
               sequence={[
                 "MERN Stack Developer",
-                2000,
+                3000,
                 "Full Stack JavaScript Developer",
-                2000,
+                3000,
+                "Web Developer",
+                3000,
                 "Next.js Developer",
-                2000,
+                3000,
                 "React & Redux Developer",
-                2000,
+                3000,
                 "Node.js & Express.js Developer",
-                2000,
+                3000,
                 "Frontend Developer",
-                2000,
+                3000,
                 "REST API & Backend Developer",
-                2000,
+                3000,
                 "TypeScript & JavaScript Developer",
-                2000,
+                3000,
                 "Git & GitHub User",
-                2000,
+                3000,
                 "Mongodb & Mysql Developer",
-                2000,
+                3000,
               ]}
               wrapper="span"
-              speed={10}
+              speed={5}
               repeat={Infinity}
               className="text-green-400"
             />
@@ -101,7 +103,7 @@ const Home = () => {
         </div>
         <div>
           <img
-            src="/public/pics/profile_pic/2.png"
+            src="/public/pics/profile_pic/2c.png"
             alt="Your Name"
             className="w-100 h-100 object-cover rounded-full border-4 border-green-400"
           />
