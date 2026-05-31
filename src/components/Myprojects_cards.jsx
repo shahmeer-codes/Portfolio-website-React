@@ -55,7 +55,7 @@ const Myprojects_cards = () => {
       title: "MERN Blog Platform",
       description:
         "A full-stack blogging platform where users can publish articles, comment, rate posts, and interact with content. Includes authentication, an admin dashboard, and complete blog management.",
-      imageUrl: "/public/pics/Projects_pics/Blogverse.png",
+      imageUrl: "/pics/Projects_pics/Blogverse.png",
       techstack: [
         "MongoDB",
         "Express.js",
@@ -63,8 +63,7 @@ const Myprojects_cards = () => {
         "Node.js",
         "JWT Authentication",
       ],
-      projectLink:
-        "https://github.com/shahmeer-codes/blog-Website-mern-project",
+      github: "https://github.com/shahmeer-codes/blog-Website-mern-project",
       status: "github",
     },
     {
@@ -209,7 +208,9 @@ const Myprojects_cards = () => {
 
         {/* OTHER PROJECTS */}
         <div>
-          <h2 className="text-3xl font-bold text-white flex justify-center items-center mb-6">Other Projects</h2>
+          <h2 className="text-3xl font-bold text-white flex justify-center items-center mb-6">
+            Other Projects
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {otherProjects.map((p) => (
               <Card key={p.id} project={p} />

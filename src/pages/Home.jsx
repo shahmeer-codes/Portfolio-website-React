@@ -1,5 +1,7 @@
 import { TypeAnimation } from "react-type-animation";
 import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa6";
+import { BsWhatsapp } from "react-icons/bs";
 
 const Home = () => {
   return (
@@ -52,20 +54,48 @@ const Home = () => {
             solutions that provide exceptional user experiences and solve
             real-world problems.
           </p>
-          <div className="flex gap-4">
+          <div className="flex gap-4 mt-6">
             <a
-              href="https://github.com/shahmeer-codes"
-              className="px-5 py-3 border flex gap-2 items-center justify-center border-green-500 text-green-500 rounded-lg hover:bg-green-500 hover:text-white transition"
+              href="#contact"
+              className="px-5 py-3 border flex gap-2 rounded-full items-center justify-center border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition"
             >
-              <FaGithub /> GitHub
+              Get in Touch
             </a>
 
             <a
               href="/resume/Shahmeer Arshad.pdf"
               download
-              className="px-5 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition"
+              className="px-5 py-3 rounded-full bg-green-600 text-white hover:bg-green-500 transition"
             >
               Download Resume
+            </a>
+          </div>
+          <div className="flex gap-6 mt-5 ml-2">
+            <a
+              href="https://github.com/shahmeer-codes"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white hover:scale-110 transition-all duration-300"
+            >
+              <FaGithub size={30} />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/shahmeer-arshad-9b1a4b1b7/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-blue-500 hover:scale-110 transition-all duration-300"
+            >
+              <FaLinkedin size={30} />
+            </a>
+
+            <a
+              href="https://wa.me/923281929639"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-green-500 hover:scale-110 transition-all duration-300"
+            >
+              <BsWhatsapp size={30} />
             </a>
           </div>
         </div>
