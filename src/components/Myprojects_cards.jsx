@@ -7,7 +7,7 @@ const Myprojects_cards = () => {
       title: "Book Store Management System",
       description:
         "A full-stack bookstore platform where users can create stores, manage inventory, sell books, and interact with customers.",
-      imageUrl: "/public/pics/Projects_pics/book-vault.png",
+      imageUrl: "/src/assets/pics/Projects_pics/book-vault.png",
       techstack: ["Next.js", "TypeScript", "MySQL", "Tailwind CSS"],
       github: "https://github.com/shahmeer-codes/book-store-website-nextjs",
       status: "github",
@@ -17,7 +17,7 @@ const Myprojects_cards = () => {
       title: "Mini Game Hub",
       description:
         "A modern mini game hub built with React and Tailwind CSS featuring Tic Tac Toe and Rock Paper Scissors.",
-      imageUrl: "/public/pics/Projects_pics/mini-game-hub.png",
+      imageUrl: "/src/assets/pics/Projects_pics/mini-game-hub.png",
       techstack: ["React", "JavaScript", "Tailwind CSS"],
       github: "https://github.com/shahmeer-codes/Mini-game-hub",
       status: "github",
@@ -27,7 +27,7 @@ const Myprojects_cards = () => {
       title: "Employee Management System",
       description:
         "Task assignment, employee tracking, Redux Toolkit, analytics dashboard with Local Storage support.",
-      imageUrl: "/public/pics/Projects_pics/employ_management .png",
+      imageUrl: "/src/assets/pics/Projects_pics/employ_management .png",
       techstack: ["React", "Redux Toolkit", "Tailwind CSS"],
       github:
         "https://github.com/shahmeer-codes/Employ-management-system-react",
@@ -38,7 +38,7 @@ const Myprojects_cards = () => {
       title: "NextAuth Authentication System",
       description:
         "A secure authentication system built with Next.js and NextAuth.js featuring user registration, login, OAuth integration, protected routes, session management, and JWT authentication.",
-      imageUrl: "/public/pics/Projects_pics/underdevlopment.png",
+      imageUrl: "/src/assets/pics/Projects_pics/underdevlopment.png",
       techstack: [
         "Next.js",
         "TypeScript",
@@ -55,7 +55,7 @@ const Myprojects_cards = () => {
       title: "MERN Blog Platform",
       description:
         "A full-stack blogging platform where users can publish articles, comment, rate posts, and interact with content. Includes authentication, an admin dashboard, and complete blog management.",
-      imageUrl: "/pics/Projects_pics/Blogverse.png",
+      imageUrl: "/src/assets/pics/Projects_pics/Blogverse.png",
       techstack: [
         "MongoDB",
         "Express.js",
@@ -71,7 +71,7 @@ const Myprojects_cards = () => {
       title: "TypeScript To-Do List",
       description:
         "Task management app with filtering, editing, statistics and TypeScript support.",
-      imageUrl: "/pics/Projects_pics/typescript-todo.png",
+      imageUrl: "/src/assets/pics/Projects_pics/typescript-todo.png",
       techstack: ["React", "TypeScript", "Tailwind CSS"],
       github: "https://github.com/shahmeer-codes/Typescript-To-do-list",
       status: "github",
@@ -91,7 +91,7 @@ const Myprojects_cards = () => {
       title: "E-Commerce Store",
       description:
         "Shopping cart system with Redux Toolkit and local storage persistence.",
-      imageUrl: "/pics/Projects_pics/Ecomerece store.png",
+      imageUrl: "/src/assets/pics/Projects_pics/Ecomerece store.png",
       techstack: ["React", "Redux Toolkit", "Tailwind CSS"],
       github: "https://github.com/shahmeer-codes/Ecommerce-store-React",
       status: "github",
