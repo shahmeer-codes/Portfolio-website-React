@@ -65,7 +65,7 @@ const Myprojects_cards = () => {
       ],
       projectLink:
         "https://github.com/shahmeer-codes/blog-Website-mern-project",
-         status: "github",
+      status: "github",
     },
     {
       id: 6,
@@ -85,7 +85,7 @@ const Myprojects_cards = () => {
       imageUrl: "/public/pics/Projects_pics/gallary-pro.png",
       techstack: ["React", "API", "Tailwind CSS"],
       github: "https://github.com/shahmeer-codes/Gallery-application-react",
-       status: "github",
+      status: "github",
     },
     {
       id: 8,
@@ -95,7 +95,7 @@ const Myprojects_cards = () => {
       imageUrl: "/pics/Projects_pics/Ecomerece store.png",
       techstack: ["React", "Redux Toolkit", "Tailwind CSS"],
       github: "https://github.com/shahmeer-codes/Ecommerce-store-React",
-       status: "github",
+      status: "github",
     },
   ];
 
@@ -161,7 +161,7 @@ const Myprojects_cards = () => {
       <img
         src={project.imageUrl}
         alt={project.title}
-        className="w-full h-64 object-cover rounded-2xl mb-6"
+        className="w-full h-64 object-cover rounded-2xl  mb-6"
       />
 
       <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
@@ -184,27 +184,40 @@ const Myprojects_cards = () => {
   );
 
   return (
-    <div className="my-12 space-y-16">
-      {/* TOP PROJECTS */}
-      <div>
-        <h2 className="text-3xl font-bold mb-6">🔥 Top Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-          {topProjects.map((p) => (
-            <Card key={p.id} project={p} />
-          ))}
-        </div>
-      </div>
+    <>
+      <div className="text-center max-w-3xl mx-auto mb-12">
+        <h1 className="text-4xl font-bold tracking-tight">Featured Projects</h1>
 
-      {/* OTHER PROJECTS */}
-      <div>
-        <h2 className="text-3xl font-bold mb-6">📁 Other Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-          {otherProjects.map((p) => (
-            <Card key={p.id} project={p} />
-          ))}
+        <p className="mt-4 text-gray-600 text-lg leading-relaxed">
+          Showcasing selected work that reflects my skills, problem-solving
+          ability, and passion for building modern web applications.
+        </p>
+
+        <p className="mt-2  text-gray-500 text-3xl font-bold uppercase tracking-widest">
+          Highlighted Work
+        </p>
+      </div>
+      <div className="my-12 space-y-16">
+        {/* TOP PROJECTS */}
+        <div>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+            {topProjects.map((p) => (
+              <Card key={p.id} project={p} />
+            ))}
+          </div>
+        </div>
+
+        {/* OTHER PROJECTS */}
+        <div>
+          <h2 className="text-3xl font-bold flex justify-center items-center mb-6">Other Projects</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+            {otherProjects.map((p) => (
+              <Card key={p.id} project={p} />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
