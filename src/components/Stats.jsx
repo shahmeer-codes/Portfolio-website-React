@@ -15,7 +15,7 @@ const statsData = [
   },
   {
     id: 3,
-    value: "5+",
+    value: "4+",
     label: "Technologies Mastered",
     icon: <FaLaptopCode />,
   },
