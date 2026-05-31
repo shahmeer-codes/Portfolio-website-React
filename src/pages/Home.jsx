@@ -83,7 +83,7 @@ const Home = () => {
             </a>
 
             <a
-              href="https://www.linkedin.com/in/shahmeer-arshad-9b1a4b1b7/"
+              href="https://www.linkedin.com/in/shahmeer-arshad/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-blue-500 hover:scale-110 transition-all duration-300"
