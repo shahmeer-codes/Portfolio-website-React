@@ -1,5 +1,15 @@
 import { FaGithub, FaExternalLinkAlt, FaClock } from "react-icons/fa";
 
+// ✅ IMPORT IMAGES (VITE SAFE WAY)
+import bookVault from "../assets/pics/Projects_pics/book-vault.png";
+import miniGameHub from "../assets/pics/Projects_pics/mini-game-hub.png";
+import employeeManagement from "../assets/pics/Projects_pics/employ_management.png";
+import underDev from "../assets/pics/Projects_pics/underdevlopment.png";
+import blogverse from "../assets/pics/Projects_pics/Blogverse.png";
+import todoTs from "../assets/pics/Projects_pics/typescript-todo.png";
+import gallery from "../assets/pics/Projects_pics/gallary-pro.png";
+import ecommerce from "../assets/pics/Projects_pics/ecommerce-store.png";
+
 const Myprojects_cards = () => {
   const projects = [
     {
@@ -7,7 +17,7 @@ const Myprojects_cards = () => {
       title: "Book Store Management System",
       description:
         "A full-stack bookstore platform where users can create stores, manage inventory, sell books, and interact with customers.",
-      imageUrl: "/src/assets/pics/Projects_pics/book-vault.png",
+      imageUrl: bookVault,
       techstack: ["Next.js", "TypeScript", "MySQL", "Tailwind CSS"],
       github: "https://github.com/shahmeer-codes/book-store-website-nextjs",
       status: "github",
@@ -17,7 +27,7 @@ const Myprojects_cards = () => {
       title: "Mini Game Hub",
       description:
         "A modern mini game hub built with React and Tailwind CSS featuring Tic Tac Toe and Rock Paper Scissors.",
-      imageUrl: "/src/assets/pics/Projects_pics/mini-game-hub.png",
+      imageUrl: miniGameHub,
       techstack: ["React", "JavaScript", "Tailwind CSS"],
       github: "https://github.com/shahmeer-codes/Mini-game-hub",
       status: "github",
@@ -27,7 +37,7 @@ const Myprojects_cards = () => {
       title: "Employee Management System",
       description:
         "Task assignment, employee tracking, Redux Toolkit, analytics dashboard with Local Storage support.",
-      imageUrl: "/src/assets/pics/Projects_pics/employ_management .png",
+      imageUrl: employeeManagement,
       techstack: ["React", "Redux Toolkit", "Tailwind CSS"],
       github:
         "https://github.com/shahmeer-codes/Employ-management-system-react",
@@ -37,8 +47,8 @@ const Myprojects_cards = () => {
       id: 4,
       title: "NextAuth Authentication System",
       description:
-        "A secure authentication system built with Next.js and NextAuth.js featuring user registration, login, OAuth integration, protected routes, session management, and JWT authentication.",
-      imageUrl: "/src/assets/pics/Projects_pics/underdevlopment.png",
+        "A secure authentication system built with Next.js and NextAuth.js featuring OAuth, JWT, and protected routes.",
+      imageUrl: underDev,
       techstack: [
         "Next.js",
         "TypeScript",
@@ -47,15 +57,15 @@ const Myprojects_cards = () => {
         "OAuth",
         "Tailwind CSS",
       ],
-      projectLink: "https://github.com/shahmeer-codes/next-auth-system",
+      github: "https://github.com/shahmeer-codes/next-auth-system",
       status: "development",
     },
     {
       id: 5,
       title: "MERN Blog Platform",
       description:
-        "A full-stack blogging platform where users can publish articles, comment, rate posts, and interact with content. Includes authentication, an admin dashboard, and complete blog management.",
-      imageUrl: "/src/assets/pics/Projects_pics/Blogverse.png",
+        "A full-stack blogging platform with authentication, comments, and admin dashboard.",
+      imageUrl: blogverse,
       techstack: [
         "MongoDB",
         "Express.js",
@@ -63,7 +73,8 @@ const Myprojects_cards = () => {
         "Node.js",
         "JWT Authentication",
       ],
-      github: "https://github.com/shahmeer-codes/blog-Website-mern-project",
+      github:
+        "https://github.com/shahmeer-codes/blog-Website-mern-project",
       status: "github",
     },
     {
@@ -71,7 +82,7 @@ const Myprojects_cards = () => {
       title: "TypeScript To-Do List",
       description:
         "Task management app with filtering, editing, statistics and TypeScript support.",
-      imageUrl: "/src/assets/pics/Projects_pics/typescript-todo.png",
+      imageUrl: todoTs,
       techstack: ["React", "TypeScript", "Tailwind CSS"],
       github: "https://github.com/shahmeer-codes/Typescript-To-do-list",
       status: "github",
@@ -81,9 +92,10 @@ const Myprojects_cards = () => {
       title: "Gallery Application",
       description:
         "Image gallery with search, debounce, favorites, and API integration.",
-      imageUrl: "/public/pics/Projects_pics/gallary-pro.png",
+      imageUrl: gallery,
       techstack: ["React", "API", "Tailwind CSS"],
-      github: "https://github.com/shahmeer-codes/Gallery-application-react",
+      github:
+        "https://github.com/shahmeer-codes/Gallery-application-react",
       status: "github",
     },
     {
@@ -91,20 +103,19 @@ const Myprojects_cards = () => {
       title: "E-Commerce Store",
       description:
         "Shopping cart system with Redux Toolkit and local storage persistence.",
-      imageUrl: "/src/assets/pics/Projects_pics/Ecomerece store.png",
+      imageUrl: ecommerce,
       techstack: ["React", "Redux Toolkit", "Tailwind CSS"],
       github: "https://github.com/shahmeer-codes/Ecommerce-store-React",
       status: "github",
     },
   ];
 
-  // TOP PROJECTS (choose manually)
   const topProjects = [
     projects.find((p) => p.title.includes("Book Store")),
     projects.find((p) => p.title.includes("MERN Blog Platform")),
     projects.find((p) => p.title.includes("Mini Game Hub")),
     projects.find((p) => p.title.includes("Employee")),
-    projects.find((p) => p.title.includes("NextAuth Authentication System")),
+    projects.find((p) => p.title.includes("NextAuth")),
   ];
 
   const otherProjects = projects.filter((p) => !topProjects.includes(p));
@@ -160,12 +171,14 @@ const Myprojects_cards = () => {
       <img
         src={project.imageUrl}
         alt={project.title}
-        className="w-full h-64 object-cover rounded-2xl  mb-6"
+        className="w-full h-64 object-cover rounded-2xl mb-6"
       />
 
       <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
 
-      <p className="text-gray-600 mb-5 line-clamp-4">{project.description}</p>
+      <p className="text-gray-600 mb-5 line-clamp-4">
+        {project.description}
+      </p>
 
       <div className="flex flex-wrap gap-2 mb-6">
         {project.techstack.map((tech, i) => (
@@ -185,37 +198,32 @@ const Myprojects_cards = () => {
   return (
     <section id="projects">
       <div className="text-center text-white max-w-3xl mx-auto mb-12">
-        <h1 className="text-4xl font-bold tracking-tight">Featured Projects</h1>
+        <h1 className="text-4xl font-bold">Featured Projects</h1>
 
-        <p className="mt-4 text-gray-600 text-lg leading-relaxed">
-          Showcasing selected work that reflects my skills, problem-solving
-          ability, and passion for building modern web applications.
+        <p className="mt-4 text-gray-600 text-lg">
+          Showcasing selected work that reflects my skills and passion.
         </p>
 
-        <p className="mt-2  text-gray-500 text-3xl font-bold uppercase tracking-widest">
+        <p className="mt-2 text-gray-500 text-3xl font-bold uppercase">
           Highlighted Work
         </p>
       </div>
+
       <div className="my-12 p-10 space-y-16">
-        {/* TOP PROJECTS */}
-        <div>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-            {topProjects.map((p) => (
-              <Card key={p.id} project={p} />
-            ))}
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+          {topProjects.map((p) => (
+            <Card key={p.id} project={p} />
+          ))}
         </div>
 
-        {/* OTHER PROJECTS */}
-        <div>
-          <h2 className="text-3xl font-bold text-white flex justify-center items-center mb-6">
-            Other Projects
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-            {otherProjects.map((p) => (
-              <Card key={p.id} project={p} />
-            ))}
-          </div>
+        <h2 className="text-3xl font-bold text-white text-center">
+          Other Projects
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+          {otherProjects.map((p) => (
+            <Card key={p.id} project={p} />
+          ))}
         </div>
       </div>
     </section>
