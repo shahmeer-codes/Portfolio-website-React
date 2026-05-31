@@ -53,7 +53,7 @@ const Home = () => {
       </div>
       <div>
         <img
-          src="/src/pics/2.png"
+          src="/src/pics/profile_pic/2.png"
           alt="Your Name"
           className="w-100 h-100 object-cover rounded-full border-4 border-green-400"
         />

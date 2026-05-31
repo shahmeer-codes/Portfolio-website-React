@@ -1,6 +1,7 @@
 const Navbar = () => {
   return (
-    <nav className="flex justify-between items-center h-16 bg-green-600 text-white px-8 shadow-sm font-mono">
+  
+      <nav className="flex justify-between items-center h-16 bg-green-600 text-white px-8 shadow-sm font-mono">
       <div className="font-bold text-2xl cursor-pointer">
         Portfolio
       </div>

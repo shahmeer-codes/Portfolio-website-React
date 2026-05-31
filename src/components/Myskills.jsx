@@ -117,7 +117,7 @@ const Myskills = () => {
       </div>
 
       {/* Skills Grid */}
-      <div className="grid sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
+      <div className="grid sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-8">
         {skills.map((skill) => (
           <div
             key={skill.name}
