@@ -41,7 +41,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="w-full py-24 px-6 md:px-16 bg-gray-50 relative">
+    <section id="contact" className="w-full py-24 px-6 md:px-16 bg-gray-50 relative">
 
       {/* ✅ TOAST POPUP */}
       {toast && (

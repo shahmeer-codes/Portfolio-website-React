@@ -1,7 +1,6 @@
 import { FaGraduationCap, FaBriefcase,FaLightbulb,FaRocket ,} from "react-icons/fa";
 import Stats from "../components/Stats";
-import Myskills from "../components/Myskills";
-import Myprojects_cards from "../components/Myprojects_cards";
+
 const About = () => {
   return (
     <section
@@ -83,8 +82,7 @@ const About = () => {
       </div>
 
       <Stats />
-      <Myskills />
-      <Myprojects_cards />
+      
     </section>
   );
 };

@@ -184,8 +184,8 @@ const Myprojects_cards = () => {
   );
 
   return (
-    <>
-      <div className="text-center max-w-3xl mx-auto mb-12">
+    <section id="projects">
+      <div className="text-center text-white max-w-3xl mx-auto mb-12">
         <h1 className="text-4xl font-bold tracking-tight">Featured Projects</h1>
 
         <p className="mt-4 text-gray-600 text-lg leading-relaxed">
@@ -197,7 +197,7 @@ const Myprojects_cards = () => {
           Highlighted Work
         </p>
       </div>
-      <div className="my-12 space-y-16">
+      <div className="my-12 p-10 space-y-16">
         {/* TOP PROJECTS */}
         <div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
@@ -209,7 +209,7 @@ const Myprojects_cards = () => {
 
         {/* OTHER PROJECTS */}
         <div>
-          <h2 className="text-3xl font-bold flex justify-center items-center mb-6">Other Projects</h2>
+          <h2 className="text-3xl font-bold text-white flex justify-center items-center mb-6">Other Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {otherProjects.map((p) => (
               <Card key={p.id} project={p} />
@@ -217,7 +217,7 @@ const Myprojects_cards = () => {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
