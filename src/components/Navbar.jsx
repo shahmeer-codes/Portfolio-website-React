@@ -6,22 +6,30 @@ const Navbar = () => {
 
   // Scroll spy
   useEffect(() => {
-    const sections = document.querySelectorAll("section");
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActive(entry.target.id);
+    const sectionIds = ["home", "about", "skills", "projects", "contact"];
+    
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      
+      sectionIds.forEach((id) => {
+        const section = document.getElementById(id);
+        if (section) {
+          const sectionHeight = section.offsetHeight;
+          const sectionTop = section.offsetTop - 150; // Offset for navbar
+          
+          if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            setActive(id);
           }
-        });
-      },
-      { threshold: 0.3 },
-    );
+        }
+      });
+    };
 
-    sections.forEach((section) => observer.observe(section));
+    window.addEventListener("scroll", handleScroll);
+    
+    // Trigger once on mount to set initial active state
+    handleScroll();
 
-    return () => observer.disconnect();
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const linkClass = (id) =>
