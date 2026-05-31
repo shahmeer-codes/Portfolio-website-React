@@ -3,6 +3,8 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { BsWhatsapp } from "react-icons/bs";
 import profilePic from "../assets/pics/profile_pic/2c.webp";
+import { FaDownload } from "react-icons/fa";
+import { FaPaperPlane, FaArrowRight } from "react-icons/fa";
 
 const Home = () => {
   return (
@@ -59,17 +61,18 @@ const Home = () => {
           <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-8">
             <a
               href="#contact"
-              className="px-5 py-3 border flex gap-2 rounded-full items-center justify-center border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition"
+              className="group px-6 py-3 rounded-full bg-green-600 text-white flex items-center gap-2 shadow-lg shadow-green-500/20 hover:bg-green-500 hover:scale-105 transition-all duration-300"
             >
+              <FaPaperPlane className="group-hover:rotate-12 transition-transform duration-300" />
               Get in Touch
             </a>
 
             <a
-              href="/resume/Shahmeer Arshad.pdf"
-              download
-              className="px-5 py-3 rounded-full bg-green-600 text-white hover:bg-green-500 transition"
+              href="#projects"
+              className="group px-6 py-3 rounded-full border border-gray-600 text-gray-300 flex items-center gap-2 hover:border-green-500 hover:text-green-500 hover:scale-105 transition-all duration-300"
             >
-              Download Resume
+              View Projects
+              <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
             </a>
           </div>
           <div className="flex justify-center md:justify-start gap-6 mt-8 md:mt-5 md:ml-2">
@@ -98,6 +101,13 @@ const Home = () => {
               className="text-gray-400 hover:text-green-500 hover:scale-110 transition-all duration-300"
             >
               <BsWhatsapp size={30} />
+            </a>
+            <a
+              href="/resume/Shahmeer Arshad.pdf"
+              download
+              className="text-gray-400 hover:text-white hover:scale-110 transition-all duration-300"
+            >
+              <FaDownload size={30} />
             </a>
           </div>
         </div>
