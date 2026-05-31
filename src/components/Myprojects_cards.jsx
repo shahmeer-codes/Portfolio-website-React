@@ -1,17 +1,17 @@
 import { FaGithub, FaExternalLinkAlt, FaClock } from "react-icons/fa";
 
 // ✅ IMPORT IMAGES (VITE SAFE WAY)
-import bookVault from "../assets/pics/Projects_pics/book-vault.png";
-import miniGameHub from "../assets/pics/Projects_pics/mini-game-hub.png";
-import employeeManagement from "../assets/pics/Projects_pics/employ_management.png";
-import underDev from "../assets/pics/Projects_pics/underdevlopment.png";
-import blogverse from "../assets/pics/Projects_pics/Blogverse.png";
-import todoTs from "../assets/pics/Projects_pics/typescript-todo.png";
-import gallery from "../assets/pics/Projects_pics/gallary-pro.png";
-import ecommerce from "../assets/pics/Projects_pics/ecommerce-store.png";
+import bookVault from "../assets/pics/Projects_pics/book-vault.webp";
+import miniGameHub from "../assets/pics/Projects_pics/mini-game-hub.webp";
+import employeeManagement from "../assets/pics/Projects_pics/employ_management.webp";
+import underDev from "../assets/pics/Projects_pics/underdevlopment.webp";
+import blogverse from "../assets/pics/Projects_pics/Blogverse.webp";
+import todoTs from "../assets/pics/Projects_pics/typescript-todo.webp";
+import gallery from "../assets/pics/Projects_pics/gallary-pro.webp";
+import ecommerce from "../assets/pics/Projects_pics/ecommerce-store.webp";
+import React from 'react';
 
-const Myprojects_cards = () => {
-  const projects = [
+const projects = [
     {
       id: 1,
       title: "Book Store Management System",
@@ -166,12 +166,15 @@ const Myprojects_cards = () => {
     );
   };
 
-  const Card = ({ project }) => (
-    <div className="bg-white text-black rounded-3xl p-5 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col">
+  const Card = React.memo(({ project }) => (
+    <div className="bg-white text-black rounded-3xl p-5 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full">
       <img
         src={project.imageUrl}
         alt={project.title}
-        className="w-full h-64 object-cover rounded-2xl mb-6"
+        loading="lazy"
+        width={400}
+        height={250}
+        className="w-full h-64 object-cover rounded-2xl mb-6 bg-gray-200"
       />
 
       <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
@@ -193,8 +196,9 @@ const Myprojects_cards = () => {
 
       {renderButtons(project)}
     </div>
-  );
-
+  ));
+  
+  const Myprojects_cards = () => {
   return (
     <section id="projects">
       <div className="text-center text-white max-w-3xl mx-auto mb-12">

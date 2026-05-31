@@ -2,7 +2,7 @@ import { TypeAnimation } from "react-type-animation";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { BsWhatsapp } from "react-icons/bs";
-import profilePic from "../assets/pics/profile_pic/2c.png";
+import profilePic from "../assets/pics/profile_pic/2c.webp";
 
 const Home = () => {
   return (
@@ -106,6 +106,8 @@ const Home = () => {
           <img
             src={profilePic}
             alt="Your Name"
+            width={400}
+            height={400}
             className="w-100 h-100 object-cover rounded-full border-4 border-green-400"
           />
         </div>

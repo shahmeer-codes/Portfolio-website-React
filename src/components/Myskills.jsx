@@ -18,10 +18,10 @@ import {
     SiGithub,
     SiPostman,
 } from "react-icons/si";
+import React from 'react';
 
-const Myskills = () => {
-  const skills = [
-    {
+const skills = [
+  {
       name: "HTML5",
       level: "Expert",
       icon: <FaHtml5 className="text-6xl text-orange-500" />,
@@ -96,8 +96,9 @@ const Myskills = () => {
       level: "Intermediate",
       icon: <SiPostman className="text-6xl text-green-600" />,
     }
-  ];
+];
 
+const Myskills = () => {
   return (
     <section
       id="skills"
