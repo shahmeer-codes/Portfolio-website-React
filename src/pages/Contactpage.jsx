@@ -3,8 +3,27 @@ import emailjs from "@emailjs/browser";
 import { FaGithub, FaPaperPlane } from "react-icons/fa";
 import { BsWhatsapp } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
+import { FaArrowUp } from "react-icons/fa";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const ContactSection = () => {
+    const arrowref = useRef();
+
+  useGSAP(() => {
+    gsap.fromTo(
+      arrowref.current,
+      { y: 0 },
+      {
+        y: 20,
+        repeat: -1,
+        yoyo: true,
+        ease: "power1.inOut",
+        duration: 1,
+      }
+    );
+  }, []);
+
   const form = useRef();
   const [loading, setLoading] = useState(false);
 
@@ -152,6 +171,15 @@ const ContactSection = () => {
           </button>
         </form>
       </div>
+
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
+              <a href="#home"
+                ref={arrowref}
+                className="h-14 w-14 flex backdrop:blur-md bg-black justify-center items-center rounded-full border border-green-400/40  backdrop-blur-md shadow-lg"
+              >
+                <FaArrowUp size={20} color="white" />
+              </a>
+       </div>
     </section>
   );
 };
