@@ -23,7 +23,6 @@ const Home = () => {
   const arrowref = useRef();
 
   useGSAP(() => {
-    // ✅ FIX: prevent null ref crash
     if (arrowref.current) {
       gsap.fromTo(
         arrowref.current,
@@ -38,7 +37,6 @@ const Home = () => {
       );
     }
 
-    // Floating background circles
     const circles = document.querySelectorAll(".floating-circle");
     circles.forEach((circle, index) => {
       gsap.to(circle, {
@@ -51,7 +49,6 @@ const Home = () => {
       });
     });
 
-    // Tech icons floating around image - orbit style
     const techIcons = document.querySelectorAll(".tech-icon");
     techIcons.forEach((icon, index) => {
       gsap.to(icon, {
@@ -85,23 +82,26 @@ const Home = () => {
           }}
         />
 
-        <div className="floating-circle absolute top-[15%] left-[10%] w-72 h-72 bg-green-500/5 rounded-full blur-2xl" />
-        <div className="floating-circle absolute top-[30%] right-[15%] w-96 h-96 bg-green-400/3 rounded-full blur-3xl" />
-        <div className="floating-circle absolute bottom-[20%] left-[20%] w-80 h-80 bg-emerald-500/5 rounded-full blur-2xl" />
-        <div className="floating-circle absolute top-[60%] right-[30%] w-64 h-64 bg-green-600/4 rounded-full blur-2xl" />
-        <div className="floating-circle absolute top-[40%] left-[50%] w-56 h-56 bg-teal-500/5 rounded-full blur-2xl" />
+        <div className="floating-circle absolute top-[10%] md:top-[15%] left-[5%] md:left-[10%] w-40 md:w-72 h-40 md:h-72 bg-green-500/5 rounded-full blur-2xl" />
+        <div className="floating-circle absolute top-[25%] md:top-[30%] right-[5%] md:right-[15%] w-56 md:w-96 h-56 md:h-96 bg-green-400/3 rounded-full blur-3xl" />
+        <div className="floating-circle absolute bottom-[15%] md:bottom-[20%] left-[10%] md:left-[20%] w-52 md:w-80 h-52 md:h-80 bg-emerald-500/5 rounded-full blur-2xl" />
+        <div className="floating-circle absolute top-[55%] md:top-[60%] right-[10%] md:right-[30%] w-44 md:w-64 h-44 md:h-64 bg-green-600/4 rounded-full blur-2xl" />
+        <div className="floating-circle absolute top-[35%] md:top-[40%] left-[40%] md:left-[50%] w-36 md:w-56 h-36 md:h-56 bg-teal-500/5 rounded-full blur-2xl" />
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 min-h-screen flex flex-col-reverse md:flex-row justify-around items-center px-4 md:px-10 py-20 gap-10 md:gap-0">
+      <div className="relative z-10 min-h-screen flex flex-col-reverse md:flex-row justify-around items-center px-4 md:px-10 py-16 md:py-20 gap-10 md:gap-0">
+        {/* Text Section */}
         <div className="max-w-4xl text-center md:text-left flex flex-col items-center md:items-start">
-          <p className="text-gray-400 text-xl mb-3">Hello, I'm</p>
+          <p className="text-gray-400 text-base md:text-xl mb-2 md:mb-3">
+            Hello, I'm
+          </p>
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-7xl font-bold mb-3 md:mb-4">
             Shahmeer Arshad
           </h1>
 
-          <div className="text-2xl md:text-4xl font-semibold mb-6">
+          <div className="text-xl sm:text-2xl md:text-4xl font-semibold mb-4 md:mb-6">
             <TypeAnimation
               sequence={[
                 "MERN Stack Developer",
@@ -128,7 +128,7 @@ const Home = () => {
             />
           </div>
 
-          <p className="text-gray-400 text-lg leading-relaxed max-w-3xl">
+          <p className="text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl">
             Passionate Full Stack Developer dedicated to building modern,
             scalable, and user-friendly web applications. I specialize in React,
             Node.js, Express, MongoDB, Redux Toolkit, and TypeScript. My focus
@@ -137,10 +137,11 @@ const Home = () => {
             real-world problems.
           </p>
 
-          <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-8">
+          {/* Buttons */}
+          <div className="flex flex-wrap justify-center md:justify-start gap-3 md:gap-4 mt-6 md:mt-8">
             <a
               href="#contact"
-              className="group px-6 py-3 rounded-full bg-green-600 text-white flex items-center gap-2 shadow-lg shadow-green-500/20 hover:bg-green-500 hover:scale-105 transition-all duration-300"
+              className="group px-5 py-2.5 md:px-6 md:py-3 rounded-full bg-green-600 text-white flex items-center gap-2 shadow-lg shadow-green-500/20 hover:bg-green-500 hover:scale-105 transition-all duration-300"
             >
               <FaPaperPlane className="group-hover:rotate-12 transition-transform duration-300" />
               Get in Touch
@@ -148,55 +149,54 @@ const Home = () => {
 
             <a
               href="#projects"
-              className="group px-6 py-3 rounded-full border border-gray-600 text-gray-300 flex items-center gap-2 hover:border-green-500 hover:text-green-500 hover:scale-105 transition-all duration-300"
+              className="group px-5 py-2.5 md:px-6 md:py-3 rounded-full border border-gray-600 text-gray-300 flex items-center gap-2 hover:border-green-500 hover:text-green-500 hover:scale-105 transition-all duration-300"
             >
               View Projects
               <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
             </a>
           </div>
 
-          <div className="flex justify-center md:justify-start gap-6 mt-8">
+          {/* Socials */}
+          <div className="flex justify-center md:justify-start gap-5 md:gap-6 mt-6 md:mt-8">
             <a href="https://github.com/shahmeer-codes">
-              <FaGithub size={30} />
+              <FaGithub size={26} />
             </a>
-
             <a href="https://www.linkedin.com/in/shahmeer-arshad/">
-              <FaLinkedin size={30} />
+              <FaLinkedin size={26} />
             </a>
-
             <a href="https://wa.me/923281929639">
-              <FaWhatsapp size={30} />
+              <FaWhatsapp size={26} />
             </a>
-
             <a href="/resume/Shahmeer Arshad.pdf" download>
-              <FaDownload size={30} />
+              <FaDownload size={26} />
             </a>
           </div>
         </div>
 
-        {/* Image */}
-        <div className="relative">
-          <div className="absolute -inset-6 border border-green-400/10 rounded-full" />
-          <div className="absolute -inset-12 border border-green-400/5 rounded-full" />
+        {/* Image Section */}
+        <div className="relative scale-90 sm:scale-100">
+          <div className="absolute -inset-4 md:-inset-6 border border-green-400/10 rounded-full" />
+          <div className="absolute -inset-8 md:-inset-12 border border-green-400/5 rounded-full" />
 
-          <div className="tech-icon absolute top-6 -right-6 z-20 w-12 h-12 bg-gray-900 border border-green-400/30 rounded-full flex items-center justify-center">
+          {/* Tech Icons (slightly reduced on mobile) */}
+          <div className="tech-icon absolute top-2 md:top-6 -right-3 md:-right-6 z-20 w-9 h-9 md:w-12 md:h-12 bg-gray-900 border border-green-400/30 rounded-full flex items-center justify-center">
+            <FaNodeJs size={18} className="text-green-500" />
+          </div>
+
+          <div className="tech-icon absolute bottom-3 md:bottom-6 -right-3 md:-right-5 z-20 w-10 h-10 md:w-14 md:h-14 bg-gray-900 border border-green-400/30 rounded-full flex items-center justify-center">
+            <FaCode size={22} className="text-green-400" />
+          </div>
+
+          <div className="tech-icon absolute -bottom-14 md:-bottom-20 left-1/2 -translate-x-1/2 z-20 w-10 h-10 md:w-14 md:h-14 bg-gray-900 border border-green-400/30 rounded-full flex items-center justify-center">
             <FaNodeJs size={22} className="text-green-500" />
           </div>
 
-          <div className="tech-icon absolute bottom-6 -right-5 z-20 w-14 h-14 bg-gray-900 border border-green-400/30 rounded-full flex items-center justify-center">
-            <FaCode size={30} className="text-green-400" />
+          <div className="tech-icon absolute bottom-3 md:bottom-6 -left-3 md:-left-6 z-20 w-9 h-9 md:w-12 md:h-12 bg-gray-900 border border-green-400/30 rounded-full flex items-center justify-center">
+            <DiMongodb size={20} className="text-green-500" />
           </div>
 
-          <div className="tech-icon absolute -bottom-20 left-1/2 -translate-x-1/2 z-20 w-14 h-14 bg-gray-900 border border-green-400/30 rounded-full flex items-center justify-center">
-            <FaNodeJs size={28} className="text-green-500" />
-          </div>
-
-          <div className="tech-icon absolute bottom-6 -left-6 z-20 w-12 h-12 bg-gray-900 border border-green-400/30 rounded-full flex items-center justify-center">
-            <DiMongodb size={28} className="text-green-500" />
-          </div>
-
-          <div className="tech-icon absolute top-6 -left-6 z-20 w-12 h-12 bg-gray-900 border border-green-400/30 rounded-full flex items-center justify-center">
-            <FaReact size={22} className="text-cyan-400" />
+          <div className="tech-icon absolute top-2 md:top-6 -left-3 md:-left-6 z-20 w-9 h-9 md:w-12 md:h-12 bg-gray-900 border border-green-400/30 rounded-full flex items-center justify-center">
+            <FaReact size={18} className="text-cyan-400" />
           </div>
 
           <div className="absolute inset-0 bg-gradient-to-br from-green-400/10 to-green-600/10 rounded-full blur-xl" />
@@ -204,20 +204,19 @@ const Home = () => {
           <img
             src={profilePic}
             alt="profile"
-            className="relative w-64 h-64 md:w-96 md:h-96 object-cover rounded-full border-4 border-green-400 shadow-[0_0_50px_rgba(34,197,94,0.3)] z-10"
+            className="relative w-52 h-52 sm:w-64 sm:h-64 md:w-96 md:h-96 object-cover rounded-full border-4 border-green-400 shadow-[0_0_50px_rgba(34,197,94,0.3)] z-10"
           />
         </div>
       </div>
 
       {/* Scroll Down */}
-      {/* Scroll Down */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20">
+      <div className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 z-20">
         <a
           href="#about"
           ref={arrowref}
-          className="h-14 w-14 flex justify-center items-center rounded-full border border-green-400/40 bg-white/5 backdrop-blur-md shadow-lg"
+          className="h-12 w-12 md:h-14 md:w-14 flex justify-center items-center rounded-full border border-green-400/40 bg-white/5 backdrop-blur-md shadow-lg"
         >
-          <FaArrowDown size={20} />
+          <FaArrowDown size={18} />
         </a>
       </div>
     </section>
