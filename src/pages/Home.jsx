@@ -158,17 +158,51 @@ const Home = () => {
 
           {/* Socials */}
           <div className="flex justify-center md:justify-start gap-5 md:gap-6 mt-6 md:mt-8">
-            <a href="https://github.com/shahmeer-codes">
-              <FaGithub size={26} />
+            <a
+              href="https://github.com/shahmeer-codes"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group w-12 h-12 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm flex items-center justify-center transition-all duration-300 hover:-translate-y-2 hover:scale-110 hover:border-green-400/50 hover:shadow-[0_0_25px_rgba(34,197,94,0.35)]"
+            >
+              <FaGithub
+                size={24}
+                className="text-gray-300 transition-all duration-300 group-hover:text-white"
+              />
             </a>
-            <a href="https://www.linkedin.com/in/shahmeer-arshad/">
-              <FaLinkedin size={26} />
+
+            <a
+              href="https://www.linkedin.com/in/shahmeer-arshad/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group w-12 h-12 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm flex items-center justify-center transition-all duration-300 hover:-translate-y-2 hover:scale-110 hover:border-blue-500/50 hover:shadow-[0_0_25px_rgba(59,130,246,0.35)]"
+            >
+              <FaLinkedin
+                size={24}
+                className="text-gray-300 transition-all duration-300 group-hover:text-blue-400"
+              />
             </a>
-            <a href="https://wa.me/923281929639">
-              <FaWhatsapp size={26} />
+
+            <a
+              href="https://wa.me/923281929639"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group w-12 h-12 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm flex items-center justify-center transition-all duration-300 hover:-translate-y-2 hover:scale-110 hover:border-green-500/50 hover:shadow-[0_0_25px_rgba(34,197,94,0.35)]"
+            >
+              <FaWhatsapp
+                size={24}
+                className="text-gray-300 transition-all duration-300 group-hover:text-green-400"
+              />
             </a>
-            <a href="/resume/Shahmeer Arshad.pdf" download>
-              <FaDownload size={26} />
+
+            <a
+              href="/resume/Shahmeer Arshad.pdf"
+              download
+              className="group w-12 h-12 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm flex items-center justify-center transition-all duration-300 hover:-translate-y-2 hover:scale-110 hover:border-emerald-500/50 hover:shadow-[0_0_25px_rgba(16,185,129,0.35)]"
+            >
+              <FaDownload
+                size={24}
+                className="text-gray-300 transition-all duration-300 group-hover:text-emerald-400 group-hover:animate-bounce"
+              />
             </a>
           </div>
         </div>
