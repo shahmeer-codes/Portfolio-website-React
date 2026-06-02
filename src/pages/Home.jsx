@@ -1,4 +1,5 @@
 import { TypeAnimation } from "react-type-animation";
+
 import {
   FaGithub,
   FaLinkedin,
@@ -10,31 +11,32 @@ import {
   FaCode,
   FaReact,
   FaNodeJs,
-
 } from "react-icons/fa";
+
 import profilePic from "../assets/pics/profile_pic/2c.webp";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import { DiMongodb } from "react-icons/di";
 
-
 const Home = () => {
   const arrowref = useRef();
 
   useGSAP(() => {
-    // Arrow bounce animation
-    gsap.fromTo(
-      arrowref.current,
-      { y: 0 },
-      {
-        y: 20,
-        repeat: -1,
-        yoyo: true,
-        ease: "power1.inOut",
-        duration: 1,
-      },
-    );
+    // ✅ FIX: prevent null ref crash
+    if (arrowref.current) {
+      gsap.fromTo(
+        arrowref.current,
+        { y: 0 },
+        {
+          y: 20,
+          repeat: -1,
+          yoyo: true,
+          ease: "power1.inOut",
+          duration: 1,
+        },
+      );
+    }
 
     // Floating background circles
     const circles = document.querySelectorAll(".floating-circle");
@@ -70,10 +72,8 @@ const Home = () => {
     >
       {/* Background Layer */}
       <div className="absolute inset-0">
-        {/* Base gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-black to-black" />
 
-        {/* Grid overlay */}
         <div
           className="absolute inset-0 opacity-[0.04]"
           style={{
@@ -85,7 +85,6 @@ const Home = () => {
           }}
         />
 
-        {/* Floating background circles */}
         <div className="floating-circle absolute top-[15%] left-[10%] w-72 h-72 bg-green-500/5 rounded-full blur-2xl" />
         <div className="floating-circle absolute top-[30%] right-[15%] w-96 h-96 bg-green-400/3 rounded-full blur-3xl" />
         <div className="floating-circle absolute bottom-[20%] left-[20%] w-80 h-80 bg-emerald-500/5 rounded-full blur-2xl" />
@@ -157,74 +156,49 @@ const Home = () => {
           </div>
 
           <div className="flex justify-center md:justify-start gap-6 mt-8">
-            <a
-              href="https://github.com/shahmeer-codes"
-              className="text-gray-400 hover:text-white hover:scale-110 transition-all duration-300"
-            >
+            <a href="https://github.com/shahmeer-codes">
               <FaGithub size={30} />
             </a>
 
-            <a
-              href="https://www.linkedin.com/in/shahmeer-arshad/"
-              className="text-gray-400 hover:text-blue-500 hover:scale-110 transition-all duration-300"
-            >
+            <a href="https://www.linkedin.com/in/shahmeer-arshad/">
               <FaLinkedin size={30} />
             </a>
 
-            <a
-              href="https://wa.me/923281929639"
-              className="text-gray-400 hover:text-green-500 hover:scale-110 transition-all duration-300"
-            >
+            <a href="https://wa.me/923281929639">
               <FaWhatsapp size={30} />
             </a>
 
-            <a
-              href="/resume/Shahmeer Arshad.pdf"
-              download
-              className="text-gray-400 hover:text-white hover:scale-110 transition-all duration-300"
-            >
+            <a href="/resume/Shahmeer Arshad.pdf" download>
               <FaDownload size={30} />
             </a>
           </div>
         </div>
 
-        {/* Image with arranged tech icons around it */}
+        {/* Image */}
         <div className="relative">
-          {/* Decorative ring behind image */}
           <div className="absolute -inset-6 border border-green-400/10 rounded-full" />
           <div className="absolute -inset-12 border border-green-400/5 rounded-full" />
 
-          {/* Tech icons arranged in a circle around the image */}
-         
-
-          {/* Top Right */}
-          <div className="tech-icon absolute top-6 -right-6 z-20 w-12 h-12 bg-gray-900 border border-green-400/30 rounded-full flex items-center justify-center shadow-lg shadow-green-500/10">
+          <div className="tech-icon absolute top-6 -right-6 z-20 w-12 h-12 bg-gray-900 border border-green-400/30 rounded-full flex items-center justify-center">
             <FaNodeJs size={22} className="text-green-500" />
           </div>
 
-          {/* Bottom Right */}
-          <div className="tech-icon absolute bottom-6 -right-5 z-20 w-14 h-14 bg-gray-900 border border-green-400/30 rounded-full flex items-center justify-center shadow-lg shadow-green-500/10">
+          <div className="tech-icon absolute bottom-6 -right-5 z-20 w-14 h-14 bg-gray-900 border border-green-400/30 rounded-full flex items-center justify-center">
             <FaCode size={30} className="text-green-400" />
           </div>
 
-          {/* Bottom */}
-          <div className="tech-icon absolute -bottom-20 left-1/2 -translate-x-1/2 z-20 w-14 h-14 bg-gray-900 border border-green-400/30 rounded-full flex items-center justify-center shadow-lg shadow-green-500/10">
+          <div className="tech-icon absolute -bottom-20 left-1/2 -translate-x-1/2 z-20 w-14 h-14 bg-gray-900 border border-green-400/30 rounded-full flex items-center justify-center">
             <FaNodeJs size={28} className="text-green-500" />
           </div>
 
-          {/* Bottom Left */}
-          <div className="tech-icon absolute bottom-6 -left-6 z-20 w-12 h-12 bg-gray-900 border border-green-400/30 rounded-full flex items-center justify-center shadow-lg shadow-green-500/10">
-          <DiMongodb size={28} className="text-green-500" />
+          <div className="tech-icon absolute bottom-6 -left-6 z-20 w-12 h-12 bg-gray-900 border border-green-400/30 rounded-full flex items-center justify-center">
+            <DiMongodb size={28} className="text-green-500" />
           </div>
 
-         
-
-          {/* Top Left */}
-          <div className="tech-icon absolute top-6 -left-6 z-20 w-12 h-12 bg-gray-900 border border-green-400/30 rounded-full flex items-center justify-center shadow-lg shadow-green-500/10">
+          <div className="tech-icon absolute top-6 -left-6 z-20 w-12 h-12 bg-gray-900 border border-green-400/30 rounded-full flex items-center justify-center">
             <FaReact size={22} className="text-cyan-400" />
           </div>
 
-          {/* Green glow behind image */}
           <div className="absolute inset-0 bg-gradient-to-br from-green-400/10 to-green-600/10 rounded-full blur-xl" />
 
           <img
@@ -235,8 +209,9 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Scroll Down Indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
+      {/* Scroll Down */}
+      {/* Scroll Down */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20">
         <a
           href="#about"
           ref={arrowref}
