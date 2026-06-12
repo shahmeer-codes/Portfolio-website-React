@@ -12,119 +12,127 @@ import ecommerce from "../assets/pics/Projects_pics/ecommerce-store.webp";
 import React from 'react';
 
 const projects = [
-    {
-      id: 1,
-      title: "Book Store Management System",
-      description:
-        "A full-stack bookstore platform where users can create stores, manage inventory, sell books, and interact with customers.",
-      imageUrl: bookVault,
-      techstack: ["Next.js", "TypeScript", "MySQL", "Tailwind CSS"],
-      github: "https://github.com/shahmeer-codes/book-store-website-nextjs",
-      status: "github",
-    },
-    {
-  id: 9,
-  title: "AI Code Reviewer",
-  description:
-    "An AI-powered code review platform that analyzes source code, identifies bugs, suggests optimizations, improves code quality, and helps developers write cleaner and more maintainable applications using Google's Gemini AI.",
-  imageUrl: aiCodeReviewer,
-  techstack: [
-    "React",
-    "Node.js",
-    "Express.js",
-    "Gemini API",
-    "Tailwind CSS",
-  ],
-  github: "https://github.com/shahmeer-codes/AI-Code-reviwer",
-  status: "github",
-},
-    {
-      id: 2,
-      title: "Mini Game Hub",
-      description:
-        "A modern mini game hub built with React and Tailwind CSS featuring Tic Tac Toe and Rock Paper Scissors.",
-      imageUrl: miniGameHub,
-      techstack: ["React", "JavaScript", "Tailwind CSS"],
-      github: "https://github.com/shahmeer-codes/Mini-game-hub",
-      status: "github",
-    },
-    {
-      id: 3,
-      title: "Employee Management System",
-      description:
-        "Task assignment, employee tracking, Redux Toolkit, analytics dashboard with Local Storage support.",
-      imageUrl: employeeManagement,
-      techstack: ["React", "Redux Toolkit", "Tailwind CSS"],
-      github:
-        "https://github.com/shahmeer-codes/Employ-management-system-react",
-      status: "github",
-    },
-    {
-      id: 4,
-      title: "NextAuth Authentication System",
-      description:
-        "A secure authentication system built with Next.js and NextAuth.js featuring OAuth, JWT, and protected routes.",
-      imageUrl: underDev,
-      techstack: [
-        "Next.js",
-        "TypeScript",
-        "NextAuth.js",
-        "JWT",
-        "OAuth",
-        "Tailwind CSS",
-      ],
-      github: "https://github.com/shahmeer-codes/next-auth-system",
-      status: "development",
-    },
-    {
-      id: 5,
-      title: "MERN Blog Platform",
-      description:
-        "A full-stack blogging platform with authentication, comments, and admin dashboard.",
-      imageUrl: blogverse,
-      techstack: [
-        "MongoDB",
-        "Express.js",
-        "React",
-        "Node.js",
-        "JWT Authentication",
-      ],
-      github:
-        "https://github.com/shahmeer-codes/blog-Website-mern-project",
-      status: "github",
-    },
-    {
-      id: 6,
-      title: "TypeScript To-Do List",
-      description:
-        "Task management app with filtering, editing, statistics and TypeScript support.",
-      imageUrl: todoTs,
-      techstack: ["React", "TypeScript", "Tailwind CSS"],
-      github: "https://github.com/shahmeer-codes/Typescript-To-do-list",
-      status: "github",
-    },
-    {
-      id: 7,
-      title: "Gallery Application",
-      description:
-        "Image gallery with search, debounce, favorites, and API integration.",
-      imageUrl: gallery,
-      techstack: ["React", "API", "Tailwind CSS"],
-      github:
-        "https://github.com/shahmeer-codes/Gallery-application-react",
-      status: "github",
-    },
-    {
-      id: 8,
-      title: "E-Commerce Store",
-      description:
-        "Shopping cart system with Redux Toolkit and local storage persistence.",
-      imageUrl: ecommerce,
-      techstack: ["React", "Redux Toolkit", "Tailwind CSS"],
-      github: "https://github.com/shahmeer-codes/Ecommerce-store-React",
-      status: "github",
-    },
-  ];
+  {
+    id: 9,
+    title: "AI Code Reviewer",
+    description:
+      "An AI-powered code review platform that analyzes source code, detects potential issues, suggests improvements, and helps developers write cleaner, more maintainable code using Google's Gemini AI.",
+    imageUrl: aiCodeReviewer,
+    techstack: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "Gemini API",
+      "Tailwind CSS",
+    ],
+    github: "https://github.com/shahmeer-codes/AI-Code-reviwer",
+    status: "github",
+  },
+
+  {
+    id: 1,
+    title: "Book Store Management System",
+    description:
+      "A full-stack multi-vendor bookstore platform where users can create stores, manage inventory, sell books, maintain wishlists, and interact with customers through a modern dashboard.",
+    imageUrl: bookVault,
+    techstack: ["Next.js", "TypeScript", "MySQL", "Tailwind CSS"],
+    github: "https://github.com/shahmeer-codes/book-store-website-nextjs",
+    status: "github",
+  },
+
+  {
+    id: 5,
+    title: "MERN Blog Platform",
+    description:
+      "A full-stack blogging platform with authentication, article publishing, comment management, user profiles, and an administrative dashboard powered by the MERN stack.",
+    imageUrl: blogverse,
+    techstack: [
+      "MongoDB",
+      "Express.js",
+      "React",
+      "Node.js",
+      "JWT Authentication",
+    ],
+    github:
+      "https://github.com/shahmeer-codes/blog-Website-mern-project",
+    status: "github",
+  },
+
+  {
+    id: 3,
+    title: "Employee Management System",
+    description:
+      "A workforce management solution featuring task assignment, employee tracking, performance monitoring, analytics dashboards, and Redux Toolkit state management.",
+    imageUrl: employeeManagement,
+    techstack: ["React", "Redux Toolkit", "Tailwind CSS"],
+    github:
+      "https://github.com/shahmeer-codes/Employ-management-system-react",
+    status: "github",
+  },
+
+  {
+    id: 4,
+    title: "NextAuth Authentication System",
+    description:
+      "A secure authentication system featuring OAuth providers, JWT sessions, route protection, and role-based access control built with Next.js and NextAuth.",
+    imageUrl: underDev,
+    techstack: [
+      "Next.js",
+      "TypeScript",
+      "NextAuth.js",
+      "JWT",
+      "OAuth",
+      "Tailwind CSS",
+    ],
+    github: "https://github.com/shahmeer-codes/next-auth-system",
+    status: "development",
+  },
+
+  {
+    id: 8,
+    title: "E-Commerce Store",
+    description:
+      "A modern e-commerce application with product browsing, shopping cart management, Redux Toolkit state handling, and persistent local storage support.",
+    imageUrl: ecommerce,
+    techstack: ["React", "Redux Toolkit", "Tailwind CSS"],
+    github: "https://github.com/shahmeer-codes/Ecommerce-store-React",
+    status: "github",
+  },
+
+  {
+    id: 7,
+    title: "Gallery Application",
+    description:
+      "A responsive image gallery featuring API integration, advanced search, debounce optimization, favorites management, and seamless user interaction.",
+    imageUrl: gallery,
+    techstack: ["React", "API", "Tailwind CSS"],
+    github:
+      "https://github.com/shahmeer-codes/Gallery-application-react",
+    status: "github",
+  },
+
+  {
+    id: 6,
+    title: "TypeScript To-Do List",
+    description:
+      "A TypeScript-powered task management application featuring task creation, editing, filtering, completion tracking, statistics, and responsive user experience.",
+    imageUrl: todoTs,
+    techstack: ["React", "TypeScript", "Tailwind CSS"],
+    github: "https://github.com/shahmeer-codes/Typescript-To-do-list",
+    status: "github",
+  },
+
+  {
+    id: 2,
+    title: "Mini Game Hub",
+    description:
+      "An interactive gaming platform featuring Tic Tac Toe and Rock Paper Scissors with responsive design, smooth gameplay, and modern React architecture.",
+    imageUrl: miniGameHub,
+    techstack: ["React", "JavaScript", "Tailwind CSS"],
+    github: "https://github.com/shahmeer-codes/Mini-game-hub",
+    status: "github",
+  },
+];
 
   const topProjects = [
   projects.find((p) => p.title.includes("AI Code Reviewer")),
