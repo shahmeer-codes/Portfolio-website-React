@@ -1,6 +1,6 @@
 import { FaGithub, FaExternalLinkAlt, FaClock } from "react-icons/fa";
 
-// ✅ IMPORT IMAGES (VITE SAFE WAY)
+import aiCodeReviewer from "../assets/pics/Projects_pics/ai-code-reviewer.jpg";
 import bookVault from "../assets/pics/Projects_pics/book-vault.webp";
 import miniGameHub from "../assets/pics/Projects_pics/mini-game-hub.webp";
 import employeeManagement from "../assets/pics/Projects_pics/employ_management.webp";
@@ -22,6 +22,22 @@ const projects = [
       github: "https://github.com/shahmeer-codes/book-store-website-nextjs",
       status: "github",
     },
+    {
+  id: 9,
+  title: "AI Code Reviewer",
+  description:
+    "An AI-powered code review platform that analyzes source code, identifies bugs, suggests optimizations, improves code quality, and helps developers write cleaner and more maintainable applications using Google's Gemini AI.",
+  imageUrl: aiCodeReviewer,
+  techstack: [
+    "React",
+    "Node.js",
+    "Express.js",
+    "Gemini API",
+    "Tailwind CSS",
+  ],
+  github: "https://github.com/shahmeer-codes/AI-Code-reviwer",
+  status: "github",
+},
     {
       id: 2,
       title: "Mini Game Hub",
@@ -111,12 +127,12 @@ const projects = [
   ];
 
   const topProjects = [
-    projects.find((p) => p.title.includes("Book Store")),
-    projects.find((p) => p.title.includes("MERN Blog Platform")),
-    projects.find((p) => p.title.includes("Mini Game Hub")),
-    projects.find((p) => p.title.includes("Employee")),
-    projects.find((p) => p.title.includes("NextAuth")),
-  ];
+  projects.find((p) => p.title.includes("AI Code Reviewer")),
+  projects.find((p) => p.title.includes("Book Store")),
+  projects.find((p) => p.title.includes("MERN Blog Platform")),
+  projects.find((p) => p.title.includes("Employee")),
+  projects.find((p) => p.title.includes("NextAuth")),
+];
 
   const otherProjects = projects.filter((p) => !topProjects.includes(p));
 
